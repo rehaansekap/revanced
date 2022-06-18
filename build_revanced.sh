@@ -67,7 +67,7 @@ available_patches=$(java -jar revanced-cli.jar -b revanced-patches.jar -a a -o b
 if [ -f "com.google.android.youtube.apk" ]
 then
     echo "Building Root APK"
-    java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar --install \
+    java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar -i amoled -i minimized-playback -i old-quality-layout -i disable-create-button -i general-ads -i video-ads -i seekbar-tapping \
                                -a com.google.android.youtube.apk -o build/revanced-root.apk
     echo "Building Non-root APK"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar --install \
